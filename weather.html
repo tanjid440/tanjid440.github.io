@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Current Weather</title>
+    <script>
+    	
+var url_string = window.location.href; //window.location.href
+var url = new URL(url_string);
+var city = url.searchParams.get("city");
+var json = url.searchParams.get("json");
+var response = "";
+
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    response = request.responseText;
+    showWeather();
+  }
+};
+request.open("GET", "https://cors-anywhere.herokuapp.com/https://google.com/search?q=weather+"+city);
+request.send();
+
+function showWeather() {
+  
+	if (json!="true") {
+	  var doc = new DOMParser().parseFromString(response, "text/html");
+	  if (doc.getElementById('wob_loc')!=null) {
+	    var loc = "Location : " + doc.getElementById('wob_loc').innerText;
+	    var temp = doc.getElementById('wob_tm').innerText;
+	    var dts = "Last Updated : " + doc.getElementById('wob_dts').innerText;
+	    var con = "Current Condition : " + doc.getElementById('wob_dc').innerText;
+	    var pp = "Precipitation : " + doc.getElementById('wob_pp').innerText;
+	    var hm = "Humidity : " + doc.getElementById('wob_hm').innerText;
+	    var tws = "Wind : " + doc.getElementById('wob_tws').innerText;
+	    temp = ((temp-32)*5/9)|0;
+	    temp = "Temperature : " + temp;
+	    document.write(loc+"<br>"+temp+"&deg;C<br>"+dts+"<br>"+con+"<br>"+pp+"<br>"+hm+"<br>"+tws+"<br>"+json);
+	  } else {
+	    document.write('location not found!');
+	  }
+	} else {
+		var doc = new DOMParser().parseFromString(response, "text/html");
+	  	if (doc.getElementById('wob_loc')!=null) {
+	  	  var loc = '"location"'+':' + '"' + doc.getElementById('wob_loc').innerText + '"';
+	      var temp = doc.getElementById('wob_tm').innerText;
+	      var dts = '"lastUpdated"'+':'+ '"' + doc.getElementById('wob_dts').innerText + '"';
+	      var con = '"currentCondition"'+':'+ '"' + doc.getElementById('wob_dc').innerText + '"';
+	      var pp = '"precipitation"'+':'+ '"' + doc.getElementById('wob_pp').innerText + '"';
+	      var hm = '"humidity"'+':'+ '"' + doc.getElementById('wob_hm').innerText + '"';
+	      var tws = '"wind"'+':'+ '"' + doc.getElementById('wob_tws').innerText + '"';
+	      temp = ((temp-32)*5/9)|0;
+	      temp = '"temperature"'+':'+'"' + temp + '"';
+	      document.write("{"+loc+", "+temp+", "+dts+", "+con+", "+pp+", "+hm+", "+tws+"}");
+	  } else {
+	      document.write('location not found!');
+	  }
+	}
+
+}
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
