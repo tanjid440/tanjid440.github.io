@@ -1,0 +1,123 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.branding {
+  width: 100vw;
+  height: 100px;
+  background-color: #161616;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.branding img {
+  height: 85px;
+  width: auto;
+}
+
+.box-left {
+  position: absolute;
+  height: 32rem;
+  width: 32rem;
+  border-radius: 6rem;
+  /* transform: rotate(60deg); */
+  left: -15rem;
+  top: 8rem;
+  background: rgb(100,188,100);
+  background: linear-gradient(300deg, rgba(100,188,100,1) 0%, rgba(4,116,60,1) 100%);
+  animation: slideRight 1.5s forwards;
+}
+
+.box-right {
+  position: absolute;
+  height: 32rem;
+  width: 32rem;
+  border-radius: 6rem;
+  /* transform: rotate(45deg); */
+  right: -18rem;
+  top: -2.5rem;
+  background: rgb(100,188,100);
+  background: linear-gradient(145deg, rgba(100,188,100,1) 0%, rgba(4,116,60,1) 100%);
+  animation: slideLeft 1.5s forwards;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.login-form b {
+  margin-bottom: 10px;
+  color: #161616;
+}
+
+.login-form input {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 16px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.login-form input:focus {
+  border: 2px solid #64bc64;
+}
+
+.login-form p {
+  font-size: 12px;
+  color: #161616;
+}
+
+.login-form p a {
+  text-decoration: none;
+  color: #64bc64;
+}
+
+.login-form button {
+  width: 250px;
+  height: 40px;
+  background: rgb(100,188,100);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 100ms ease-out;
+}
+
+.login-form button:active {
+  transform: scale(0.98);
+}
+
+@keyframes slideRight {
+  to {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    transform: rotate(45deg);
+  }
+}
