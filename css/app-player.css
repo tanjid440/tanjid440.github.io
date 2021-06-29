@@ -1,0 +1,25 @@
+@import url("default.css");
+@import url("utility.css");
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: var(--dark);
+  overflow: hidden;
+}
+
+.green-text {
+  color: var(--secondary);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  margin: 38px 100px;
+}
+
+.green-text svg {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.player img {
+  width: 100vw;
+}
