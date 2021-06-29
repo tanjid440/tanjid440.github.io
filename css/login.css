@@ -1,5 +1,5 @@
-@import url('_default.css');
-@import url("_utility.css");
+@import url('default.css');
+@import url("utility.css");
 
 .login-form {
   display: flex;
