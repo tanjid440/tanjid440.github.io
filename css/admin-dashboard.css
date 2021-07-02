@@ -1,0 +1,286 @@
+@import url("default.css");
+@import url("utility.css");
+
+.content {
+  padding: 16px 10rem;
+  background-color: var(--white);
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
+.panel-wrapper {
+  background-color: var(--white);
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  /* padding-right: 0; */
+  border-radius: 16px;
+  height: calc(100vh - 230px);
+  box-shadow: 0 0 16px 3px #0000001a;
+}
+
+.tabs-panel {
+  border-bottom: 1px solid var(--light);
+  padding: 0px 0 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs-panel label {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0 12px 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+input[name='tab'] {
+  visibility: hidden;
+}
+
+#add-app-btn {
+  display: none;
+}
+
+.custom-btn {
+  margin: 0;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.active-tab-indicator {
+  border-bottom: 3px solid var(--main);
+  color: var(--main);
+}
+
+.app-grid {
+  display: none;
+  flex-wrap: wrap;
+  height: calc(100% - 80px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-top: 10px;
+}
+.app-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.app-card {
+  height: 225px;
+  width: 208px;
+  border: 1.5px solid var(--light);
+  border-radius: 10px;
+  margin: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 8px;
+  padding-bottom: 0;
+  /* transition-duration: 300ms; */
+}
+
+.app-thumb {
+  background-color: var(--light);
+  height: 170px;
+  width: 100%;
+  display: flex;
+  border: 1.5px solid var(--light);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  /* transition-duration: 300ms; */
+}
+
+.app-thumb img {
+  width: 45px;
+  height: auto;
+  opacity: 0.75;
+  visibility: hidden;
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 42px;
+  padding: 0 10px;
+}
+
+.app-info b {
+  color: var(--main);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.app-info p {
+  color: var(--dark);
+  font-size: 10px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.app-card:hover {
+  border: 1.5px solid var(--secondary);
+}
+
+.users-grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 80px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-top: 10px;
+}
+.users-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.user-info {
+  margin: 0px;
+}
+
+.user-info p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.user-info > p > svg {
+  margin-right: 8px;
+}
+.user-name {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--main);
+  justify-content: space-between;
+}
+
+.user-text {
+  font-size: 10px;
+}
+
+.card-sub-title {
+  color: var(--main);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.user-info > p:nth-child(2) {
+  /* margin-top: -6px; */
+  margin-bottom: 16px;
+}
+
+.user-info > p:nth-child(3), .user-info > p:nth-child(4) {
+  margin-bottom: 6px;
+}
+
+.user-info > p:nth-child(5), .user-info > p:nth-child(7) {
+  margin-top: 18px;
+}
+
+.apps-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.apps-list > .app-thumb-small {
+  height: 24px;
+  width: 24px;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: var(--light);
+}
+
+.apps-list svg {
+  margin: 4px;
+  margin-top: 6px;
+}
+
+.slideIn {
+  animation: slide-in 300ms ease forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-bg {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #000000aa;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 300ms;
+}
+
+#addUserPopup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#addAppPopup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  position: relative;
+  background-color: var(--white);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.form-title {
+  margin-bottom: 1rem;
+}
+
+.popup div {
+  margin-top: 1rem;
+}
+
+.close-button {
+  position: absolute;
+  background-color: var(--light);
+  top: -12px;
+  right: -10px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fileUpload {
+  border: 2px dashed var(--secondary);
+  border-radius: 10px;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fileUpload p {
+  text-align: center;
+  font-size: 14px;
+}
