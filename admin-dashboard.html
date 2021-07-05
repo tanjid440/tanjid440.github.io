@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | OGL Engineering</title>
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body>
+  <div>
+    <div class="branding-bar header">
+      <img src="assets/OGL_Engineering_logo.png" alt="OGL_Engineering_logo">
+      <button class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+          height="24px" viewBox="0 0 24 24" width="24px" fill="#04743c">
+          <g>
+            <rect fill="none" height="24" width="24" />
+          </g>
+          <g>
+            <path
+              d="M11,7L9.6,8.4l2.6,2.6H2v2h10.2l-2.6,2.6L11,17l5-5L11,7z M20,19h-8v2h8c1.1,0,2-0.9,2-2V5c0-1.1-0.9-2-2-2h-8v2h8V19z" />
+          </g>
+        </svg>Logout</button>
+    </div>
+    <div class="content">
+      <h2 class="form-title">Welcome Admin Name,</h2>
+      <div class="panel-wrapper">
+        <div class="tabs-panel">
+          <div>
+            <label class="active-tab-indicator">
+              Users
+              <input type="radio" name="tab" id="user-tab-btn" value='.users-grid' checked>
+            </label>
+            <label>
+              Apps
+              <input type="radio" name="tab" id="user-tab-btn" value='.app-grid'>
+            </label>
+          </div>
+          <a href='#addUserPopup' class="btn-secondary custom-btn" id='add-user-btn'><svg
+              xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--secondary)">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H9zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3z" />
+            </svg>Add New User</a>
+          <a href='#addAppPopup' class="btn-secondary custom-btn" id="add-app-btn"><svg
+              xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path fill='var(--secondary)'
+                d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+            </svg>Add New App</a>
+        </div>
+        <div class="users-grid">
+          <div class="app-card">
+            <div class="user-info">
+              <p class="user-name"><span>User Name</span><a href="#editUserPopup"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 0 24 24" width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill="var(--secondary)"
+                    d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+                </svg></a></p>
+              <p class="user-text">CompanyName</p>
+              <p class="user-text"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24"
+                  width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill='var(--secondary)'
+                    d="M21.99 8c0-.72-.37-1.35-.94-1.7L12 1 2.95 6.3C2.38 6.65 2 7.28 2 8v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2l-.01-10zm-2 0v.01L12 13 4 8l8-4.68L19.99 8zM4 18v-7.66l8 5.02 7.99-4.99L20 18H4z" />
+                </svg>username@domain.com</p>
+              <p class="user-text"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24"
+                  width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill='var(--secondary)'
+                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                </svg>21-12-2019</p>
+              <p class="card-sub-title">Notes</p>
+              <p class="user-text">Lorem, ipsum dolor.</p>
+              <p class="card-sub-title">Apps</p>
+              <div class="apps-list">
+                <div class="app-thumb-small"></div>
+                <div class="app-thumb-small"></div>
+                <div class="app-thumb-small"></div>
+                <div class="app-add-small">
+                  <a href="#addApptoUser"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                      width="24px" fill="#000000">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path fill='var(--secondary)'
+                        d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app-card">
+            <div class="user-info">
+              <p class="user-name"><span>User Name</span><a href="#editUserPopup"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 0 24 24" width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill="var(--secondary)"
+                    d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+                </svg></a></p>
+              <p class="user-text">CompanyName</p>
+              <p class="user-text"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24"
+                  width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill='var(--secondary)'
+                    d="M21.99 8c0-.72-.37-1.35-.94-1.7L12 1 2.95 6.3C2.38 6.65 2 7.28 2 8v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2l-.01-10zm-2 0v.01L12 13 4 8l8-4.68L19.99 8zM4 18v-7.66l8 5.02 7.99-4.99L20 18H4z" />
+                </svg>username@domain.com</p>
+              <p class="user-text"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24"
+                  width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill='var(--secondary)'
+                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                </svg>21-12-2019</p>
+              <p class="card-sub-title">Notes</p>
+              <p class="user-text">Lorem, ipsum dolor.</p>
+              <p class="card-sub-title">Apps</p>
+              <div class="apps-list">
+                <div class="app-thumb-small"></div>
+                <div class="app-thumb-small"></div>
+                <div class="app-thumb-small"></div>
+                <div class="app-add-small">
+                  <a href="#addApptoUser"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                      width="24px" fill="#000000">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path fill='var(--secondary)'
+                        d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app-card">
+            <div class="user-info">
+              <p class="user-name"><span>User Name</span><a href="#editUserPopup"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 0 24 24" width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill="var(--secondary)"
+                    d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+                </svg></a></p>
+              <p class="user-text">CompanyName</p>
+              <p class="user-text"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24"
+                  width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill='var(--secondary)'
+                    d="M21.99 8c0-.72-.37-1.35-.94-1.7L12 1 2.95 6.3C2.38 6.65 2 7.28 2 8v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2l-.01-10zm-2 0v.01L12 13 4 8l8-4.68L19.99 8zM4 18v-7.66l8 5.02 7.99-4.99L20 18H4z" />
+                </svg>username@domain.com</p>
+              <p class="user-text"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24"
+                  width="24px" fill="#000000">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path fill='var(--secondary)'
+                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                </svg>21-12-2019</p>
+              <p class="card-sub-title">Notes</p>
+              <p class="user-text">Lorem, ipsum dolor.</p>
+              <p class="card-sub-title">Apps</p>
+              <div class="apps-list">
+                <div class="app-thumb-small"></div>
+                <div class="app-thumb-small"></div>
+                <div class="app-thumb-small"></div>
+                <div class="app-add-small">
+                  <a href="#addApptoUser"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                      width="24px" fill="#000000">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path fill='var(--secondary)'
+                        d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-grid">
+          <div class="app-card">
+            <div class="app-thumb"></div>
+            <div class="app-info">
+              <b>App Name</b>
+              <p>appurl1212.com</p>
+            </div>
+          </div>
+          <div class="app-card">
+            <div class="app-thumb"></div>
+            <div class="app-info">
+              <b>App Name</b>
+              <p>appurl1212.com</p>
+            </div>
+          </div>
+          <div class="app-card">
+            <div class="app-thumb"></div>
+            <div class="app-info">
+              <b>App Name</b>
+              <p>appurl1212.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="addUserPopup" class="popup-bg">
+    <form class="form popup">
+      <a href="#" class="close-button">X</a>
+      <div class="form-title">Add New User</div>
+      <input type="text" name="f_name" placeholder="First Name">
+      <input type="text" name="l_name" placeholder="Last Name">
+      <input type="text" name="email" placeholder="Email">
+      <input type="text" name="company" placeholder="Company">
+      <div>
+        <button class="btn btn-primary-outline btn-half">RESET</button>
+        <button class="btn btn-primary btn-half">SAVE</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="editUserPopup" class="popup-bg">
+    <form class="form popup">
+      <a href="#" class="close-button">X</a>
+      <div class="form-title">Edit User Info</div>
+      <input type="text" name="f_name" placeholder="First Name">
+      <input type="text" name="l_name" placeholder="Last Name">
+      <input type="text" name="email" placeholder="Email">
+      <input type="text" name="company" placeholder="Company">
+      <input type="text" name="notes" placeholder="Notes">
+      <div>
+        <button class="btn btn-primary-outline btn-half">RESET</button>
+        <button class="btn btn-primary btn-half">SAVE</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="addAppPopup" class="popup-bg">
+    <form class="form popup">
+      <a href="#" class="close-button">X</a>
+      <div class="form-title">Add New App</div>
+      <input type="text" name="app_name" placeholder="App Name">
+      <input type="text" name="app_url" placeholder="App URL">
+      <div class="fileUpload">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path fill="var(--secondary)"
+            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.86 8.86l-3 3.87L9 13.14 6 17h12l-3.86-5.14z" />
+        </svg>
+        <p>Drag And Drop your image files here.<br>Or <a class="primary-link">upload file.</a></p>
+      </div>
+      <div>
+        <button class="btn btn-primary-outline btn-half">RESET</button>
+        <button class="btn btn-primary btn-half">SAVE</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="addApptoUser" class="popup-bg">
+    <form class="form popup">
+      <a href="#" class="close-button">X</a>
+      <div class="form-title">Add New App to User</div>
+      <div class="popup-app-grid">
+        <div class="app-card">
+          <div class="app-thumb">
+            <label class="checkbox">
+              <input type="checkbox" name="appid">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="app-info">
+            <b>App Name</b>
+            <p>appurl1212.com</p>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-thumb">
+            <label class="checkbox">
+              <input type="checkbox" name="appid">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="app-info">
+            <b>App Name</b>
+            <p>appurl1212.com</p>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-thumb">
+            <label class="checkbox">
+              <input type="checkbox" name="appid">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="app-info">
+            <b>App Name</b>
+            <p>appurl1212.com</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+
+    let addUSerBtn = document.querySelector('#add-user-btn')
+    let addAppBtn = document.querySelector('#add-app-btn')
+
+    document.querySelectorAll('.tabs-panel input[name=tab]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        let selectedTab = document.querySelector('input[name=tab]:checked')
+        let notSelectedTab = document.querySelector('input[name=tab]:not(:checked)')
+        selectedTab.parentNode.classList.add('active-tab-indicator')
+        notSelectedTab.parentNode.classList.remove('active-tab-indicator')
+        document.querySelector(selectedTab.value).style.display = 'flex'
+        document.querySelector(selectedTab.value).classList.add('slideIn')
+        document.querySelector(notSelectedTab.value).style.display = 'none'
+        document.querySelector(notSelectedTab.value).classList.remove('slideIn')
+        if (selectedTab.value == '.app-grid') {
+          addUSerBtn.style.display = 'none';
+          addUSerBtn.classList.remove('slideIn')
+          addAppBtn.style.display = 'flex';
+          addAppBtn.classList.add('slideIn')
+        } else if (selectedTab.value == '.users-grid') {
+          addAppBtn.style.display = 'none';
+          addAppBtn.classList.remove('slideIn')
+          addUSerBtn.style.display = 'flex';
+          addUSerBtn.classList.add('slideIn')
+        }
+      })
+    });
+
+  </script>
+
+</body>
+
+</html>

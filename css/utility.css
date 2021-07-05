@@ -1,0 +1,148 @@
+.branding-bar {
+  width: 100%;
+  height: 137px;
+  background-color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.branding-bar img {
+  height: 112px;
+  width: 269px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.form input {
+  height: 50px;
+  width: 300px;
+  border: 2px solid var(--light);
+  border-radius: 25px;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 8px 0;
+  transition-duration: 300ms;
+}
+
+.form input:focus {
+  border: 2px solid var(--main);
+}
+
+.info-text {
+  font-size: 12px;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.primary-link {
+  text-decoration: none;
+  color: var(--main);
+}
+
+.form-title {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--dark);
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.form-title img {
+  margin-right: 8px;
+}
+
+.btn {
+  height: 50px;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  margin: 8px 0;
+}
+
+.btn-full {
+  width: 300px;
+}
+
+.btn-half {
+  width: 148px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: var(--main);
+  color: var(--white);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-primary-outline {
+  background-color: var(--white);
+  color: var(--main);
+  border: 2px solid var(--main);
+}
+
+.btn-secondary {
+  height: 36px;
+  padding: 8px 14px;
+  color: var(--secondary);
+  border-radius: 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 8px 0;
+  transition-duration: 300ms;
+  display: flex;
+  align-items: center;
+}
+
+.btn-secondary svg {
+  margin-right: 8px;
+}
+
+.btn-secondary:hover, .btn-primary-outline:hover {
+  background-color: var(--light);
+}
+
+.space-4 {
+  letter-spacing: 4px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.header {
+  padding: 0 10rem;
+  justify-content: space-between;
+  margin-top: 0;
+  height: 90px;
+}
+
+.header img {
+  width: 150px;
+  height: auto;
+}
+
+.wrapper-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
